@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="10dp">
+
+    <TextView android:id="@+id/textView1" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" android:text="@string/country_info"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView android:id="@+id/choose_text" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1" android:text="@string/choose_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="10dp" />
+
+    <Spinner android:id="@+id/continentList" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_below="@+id/textView1"
+        android:layout_marginTop="10dp" android:layout_toRightOf="@id/choose_text" />
+
+    <TextView android:id="@+id/textView2" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+        android:layout_below="@+id/continentList" android:text="@string/country_code"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="10dp" />
+
+    <TextView android:id="@+id/textView3" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2" android:layout_marginTop="13dp"
+        android:text="@string/country_name" android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginLeft="42dp"
+        android:layout_marginBottom="-2dp"
+        android:layout_toRightOf="@+id/textView2"
+        android:ems="3"
+        android:inputType="textCapCharacters"
+        android:maxLength="3"
+        android:paddingLeft="10dp">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText android:id="@+id/name" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_alignBottom="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3" android:ems="30"
+        android:inputType="text" android:paddingLeft="10dp" />
+
+    <Button android:id="@+id/save" style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" android:layout_below="@+id/name"
+        android:layout_marginRight="21dp" android:layout_marginTop="13dp"
+        android:text="@string/save_country" />
+
+    <Button android:id="@+id/delete" style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/save" android:layout_alignBottom="@+id/save"
+        android:layout_toLeftOf="@+id/save" android:text="@string/del_country" />
+</RelativeLayout>
